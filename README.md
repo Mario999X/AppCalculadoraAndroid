@@ -2,7 +2,7 @@
 
 Se trata de una simple calculadora pensada para su uso en Android. 
 
-## La apliación ofrece:
+## La aplicación ofrece:
 
     1. Un par de campos a rellenar (Nº1 y Nº2).
     2. Opciones básicas:
