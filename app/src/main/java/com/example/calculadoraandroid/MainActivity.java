@@ -3,6 +3,7 @@ package com.example.calculadoraandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,13 +61,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 viewResultado.setText(String.valueOf(a*b));
                 break;
             case R.id.btnDiv:
-                viewResultado.setText(String.valueOf(a/b));
+                if (b == 0) {
+                    viewResultado.setText("Dividido por 0");
+                } else {
+                    viewResultado.setText(String.valueOf(a / b));
+                }
                 break;
             case R.id.btnReset:
-                editNumeroUno.setText("");
-                editNumeroDos.setText("");
-                viewResultado.setText("");
-
+                editNumeroUno.setText("0");
+                editNumeroDos.setText("0");
+                viewResultado.setText("Resultado");
+                break;
             default:
                 System.out.println("Definido");
         }
